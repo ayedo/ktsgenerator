@@ -46,7 +46,7 @@ Add the following to your *build.gradle* plugin configuration block:
     
       // What to use for void type. 
       // Options: 'NULL', or 'UNDEFINED'
-      voidType = "UNDEFINED" // optional, this is th default
+      voidType = "UNDEFINED" // optional, this is the default
     
     }
     
