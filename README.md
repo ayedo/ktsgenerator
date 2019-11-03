@@ -26,7 +26,7 @@ Add the following to your *build.gradle* plugin configuration block:
 
       // Only classes which have the follwing postfixes will be generated
       // Set to the empty list [] if no filter should be applied.
-      postfixFilters = ["OP", "IP"] // required, this is an example
+      postfixFilters = ["OP", "IP"]
 
       // Which type to use for int
       intTypeName = "number"
