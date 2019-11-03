@@ -54,7 +54,8 @@ Add the following to your *build.gradle* plugin configuration block:
 ## Usage
 
 The plugins adds a task named *generateTypescriptDefinitions* to your build.
-Use it to generate the typescript definitions file.
+
+Use it to generate the typescript definitions file:
 
     ./gradlew generateTypescriptDefinitions
     
