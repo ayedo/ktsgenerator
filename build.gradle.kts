@@ -31,7 +31,7 @@ gradlePlugin {
         create("ktsgenerator") {
             id = "ch.ayedo.ktsgenerator"
             displayName = "ktsgenerator"
-            description = "Plugin to generate Typescript definitions from Kotlin data classes."
+            description = "Plugin to generate Typescript definitions from Kotlin classes."
             version = version
             implementationClass = "ch.ayedo.ktsgenerator.TypeScriptGeneratorPlugin"
         }
@@ -41,7 +41,7 @@ gradlePlugin {
 pluginBundle {
     website = "https://github.com/ayedo/ktsgenerator"
     vcsUrl = "https://github.com/ayedo/ktsgenerator.git"
-    tags = listOf("Kotlin", "Typescript", "Generator")
+    tags = listOf("Kotlin", "Typescript", "Typescript-definitions", "Generator", "Typescript-generator")
 }
 
 
