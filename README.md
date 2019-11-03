@@ -45,9 +45,9 @@ Add the following to your *build.gradle* plugin configuration block:
       imports = ["import { Moment } from 'moment';",
                  "import BigNumber from 'bignumber.js';"]
     
-      // Which me.ntrrgc.tsGenerator.VoidType to use.
-      // Options: VoidType.NULL, VoidType.UNDEFINED
-      voidType = VoidType.UNDEFINED
+      // What to use for void type. 
+      // Options: 'NULL', or 'UNDEFINED'
+      voidType = "UNDEFINED" // optional, this is th default
     
     }
     

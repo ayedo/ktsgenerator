@@ -1,5 +1,6 @@
 package ch.ayedo.ktsgenerator
 
+import me.ntrrgc.tsGenerator.VoidType
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 
@@ -37,9 +38,16 @@ open class TypeScriptGeneratorPlugin : Plugin<Project> {
                 intTypeName = config.intTypeName ?: throw IncompletePluginConfigurationException(
                     "intTypeName"
                 )
-                voidType = config.voidType ?: throw IncompletePluginConfigurationException(
-                    "voidType"
-                )
+                voidType = when (config.voidType) {
+                    "UNDEFINED" -> VoidType.UNDEFINED
+                    "NULL" -> VoidType.NULL
+                    null -> throw IncompletePluginConfigurationException(
+                        "voidType"
+                    )
+                    else -> throw InvalidPluginConfigurationException(
+                        "voidType", "'NULL', or 'UNDEFINED'"
+                    )
+                }
             }
 
         })
@@ -48,6 +56,10 @@ open class TypeScriptGeneratorPlugin : Plugin<Project> {
 
     class IncompletePluginConfigurationException(missing: String) : IllegalArgumentException(
         "Incomplete TypescriptGenerator plugin configuration: $missing is missing"
+    )
+
+    class InvalidPluginConfigurationException(input: String, expected: String) : IllegalArgumentException(
+        "Incomplete TypescriptGenerator plugin configuration: $input is invalid. Expected: $expected."
     )
 
 }

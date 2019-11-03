@@ -12,5 +12,5 @@ open class TypeScriptGeneratorExtension {
     var postfixFilters: List<String>? = null
     var imports: List<String>? = null
     var intTypeName: String? = null
-    var voidType: VoidType? = null
+    var voidType: String? = "UNDEFINED"
 }
