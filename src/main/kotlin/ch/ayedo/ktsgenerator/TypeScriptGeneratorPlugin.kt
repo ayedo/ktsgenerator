@@ -29,9 +29,8 @@ open class TypeScriptGeneratorPlugin : Plugin<Project> {
                 typeMappings = config.typeMappings ?: throw IncompletePluginConfigurationException(
                     "typeMappings"
                 )
-                postfixFilters = config.postfixFilters ?: throw IncompletePluginConfigurationException(
-                    "postfixFilters"
-                )
+
+                postfixFilters = config.postfixFilters
 
                 imports = config.imports
 
