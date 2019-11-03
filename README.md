@@ -29,7 +29,7 @@ Add the following to your *build.gradle* plugin configuration block:
       postfixFilters = ["OP", "IP"]
 
       // Which type to use for int
-      intTypeName = "number"
+      intTypeName = "number" // optional, this is the default
     
       // Custom type mappings
       typeMappings = [
