@@ -79,9 +79,12 @@ open class TypeScriptGeneratorTask : DefaultTask() {
         )
 
         val result =
-            imports.joinToString("\n") +
-                    "\n\n" +
-                    generator.definitionsText
+            if (imports.isEmpty())
+                generator.definitionsText
+            else
+                imports.joinToString("\n") +
+                        "\n\n" +
+                        generator.definitionsText
 
         outputPath.toFile().writeText(result)
 

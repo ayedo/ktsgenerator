@@ -25,8 +25,7 @@ Add the following to your *build.gradle* plugin configuration block:
       packageName = "com.example.backend"
 
       // Only classes which have the follwing postfixes will be generated
-      // Set to the empty list [] if no filter should be applied.
-      postfixFilters = ["OP", "IP"]
+      postfixFilters = ["OP", "IP"] // optional, the default is []
 
       // Which type to use for int
       intTypeName = "number" // optional, this is the default

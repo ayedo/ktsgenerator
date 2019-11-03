@@ -32,9 +32,9 @@ open class TypeScriptGeneratorPlugin : Plugin<Project> {
                 postfixFilters = config.postfixFilters ?: throw IncompletePluginConfigurationException(
                     "postfixFilters"
                 )
-                imports = config.imports ?: throw IncompletePluginConfigurationException(
-                    "imports"
-                )
+
+                imports = config.imports
+
                 intTypeName = config.intTypeName
 
                 voidType = when (config.voidType) {

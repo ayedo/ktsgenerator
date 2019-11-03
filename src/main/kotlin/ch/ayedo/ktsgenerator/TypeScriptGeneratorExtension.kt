@@ -10,7 +10,7 @@ open class TypeScriptGeneratorExtension {
     var packageName: String? = null
     var typeMappings: Map<String, String>? = null
     var postfixFilters: List<String>? = null
-    var imports: List<String>? = null
+    var imports: List<String> = listOf()
     var intTypeName: String = "number"
     var voidType: String = "UNDEFINED"
 }
