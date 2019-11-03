@@ -4,7 +4,6 @@ import me.ntrrgc.tsGenerator.VoidType
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 
-
 open class TypeScriptGeneratorPlugin : Plugin<Project> {
 
     override fun apply(project: Project) {

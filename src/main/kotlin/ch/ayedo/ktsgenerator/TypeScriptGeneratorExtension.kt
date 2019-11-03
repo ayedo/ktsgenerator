@@ -1,6 +1,5 @@
 package ch.ayedo.ktsgenerator
 
-import me.ntrrgc.tsGenerator.VoidType
 import org.gradle.api.file.FileCollection
 import java.nio.file.Path
 
