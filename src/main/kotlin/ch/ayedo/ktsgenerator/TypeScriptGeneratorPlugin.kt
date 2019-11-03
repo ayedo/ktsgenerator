@@ -35,15 +35,11 @@ open class TypeScriptGeneratorPlugin : Plugin<Project> {
                 imports = config.imports ?: throw IncompletePluginConfigurationException(
                     "imports"
                 )
-                intTypeName = config.intTypeName ?: throw IncompletePluginConfigurationException(
-                    "intTypeName"
-                )
+                intTypeName = config.intTypeName
+
                 voidType = when (config.voidType) {
                     "UNDEFINED" -> VoidType.UNDEFINED
                     "NULL" -> VoidType.NULL
-                    null -> throw IncompletePluginConfigurationException(
-                        "voidType"
-                    )
                     else -> throw InvalidPluginConfigurationException(
                         "voidType", "'NULL', or 'UNDEFINED'"
                     )
