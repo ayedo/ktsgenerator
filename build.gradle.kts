@@ -16,10 +16,21 @@ repositories {
     }
 }
 
+tasks.test {
+    useJUnitPlatform()
+    testLogging {
+        events("passed", "skipped", "failed")
+    }
+}
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
     implementation("com.github.ntrrgc", "ts-generator", "1.1.1")
     implementation("com.google.guava", "guava", "27.0.1-jre")
+    implementation("org.jetbrains.kotlin","kotlin-reflect", "1.3.50")
+
+    testImplementation("org.assertj", "assertj-core", "3.12.2")
+    testImplementation("org.junit.jupiter", "junit-jupiter-api", "5.5.2")
+    testRuntime("org.junit.jupiter","junit-jupiter-engine", "5.5.2")
 }
 
 tasks.withType<KotlinCompile> {
@@ -43,5 +54,3 @@ pluginBundle {
     vcsUrl = "https://github.com/ayedo/ktsgenerator.git"
     tags = listOf("Kotlin", "Typescript", "Typescript-definitions", "Generator", "Typescript-generator")
 }
-
-
