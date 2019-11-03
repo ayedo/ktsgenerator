@@ -16,19 +16,22 @@ open class TypeScriptGeneratorPlugin : Plugin<Project> {
             val config = project.extensions.findByType(TypeScriptGeneratorExtension::class.java)!!
 
             project.tasks.create("generateTypescriptDefinitions", TypeScriptGeneratorTask::class.java).apply {
+
                 description = "Generates Typescript definitions from Kotlin classes."
+
                 outputPath = config.outputPath ?: throw IncompletePluginConfigurationException(
                     "outputPath"
                 )
+
                 classPath = config.classPath ?: throw IncompletePluginConfigurationException(
                     "classPath"
                 )
+
                 packageName = config.packageName ?: throw IncompletePluginConfigurationException(
                     "packageName"
                 )
-                typeMappings = config.typeMappings ?: throw IncompletePluginConfigurationException(
-                    "typeMappings"
-                )
+
+                typeMappings = config.typeMappings
 
                 postfixFilters = config.postfixFilters
 

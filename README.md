@@ -37,7 +37,7 @@ Add the following to your *build.gradle* plugin configuration block:
         "java.time.LocalTime"    : 'TimeMoment',
         "java.util.UUID"         : 'string',
         "java.net.URL"           : 'string',
-        "java.math.BigDecimal"   : 'BigNumber']
+        "java.math.BigDecimal"   : 'BigNumber'] // optional, the default is []
       
       // Imports to be added at the top of the generated typescript defintions file
       // Set to the empty list [] if no imports should be added.
