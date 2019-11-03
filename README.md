@@ -15,14 +15,14 @@ Add the following to your *build.gradle* plugin configuration block:
     typescriptGenerator {
     
       // The path to the resulting generated type defintions file
-      outputPath = project.projectDir.toPath().resolve("src/typings/typings.d.ts")
+      outputPath = project.projectDir.toPath().resolve("src/typings/typings.d.ts") // required, this is an example
     
       // The classpath to scan for classes to convert to typescript defintions
       classPath = layout.files(
-        project(":project-name").sourceSets.main.runtimeClasspath)
+        project(":project-name").sourceSets.main.runtimeClasspath) // required, this is an example
         
       // Only Kotlin classes from this package will be considered for generation
-      packageName = "com.example.backend"
+      packageName = "com.example.backend" // required, this is an example
 
       // Only classes which have the follwing postfixes will be generated
       postfixFilters = ["OP", "IP"] // optional, the default is []
