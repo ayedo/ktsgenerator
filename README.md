@@ -41,7 +41,7 @@ Add the following to your *build.gradle* file:
         "java.net.URL"           : 'string',
         "java.math.BigDecimal"   : 'BigNumber'] // optional, the default is []
       
-      // Imports to be added at the top of the generated typescript defintions file
+      // Imports to be added at the top of the generated typescript definitions file
       imports = ["import { Moment } from 'moment';",
                  "import BigNumber from 'bignumber.js';"] // optional, the default is []
     
