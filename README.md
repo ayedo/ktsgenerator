@@ -40,7 +40,6 @@ Add the following to your *build.gradle* plugin configuration block:
         "java.math.BigDecimal"   : 'BigNumber'] // optional, the default is []
       
       // Imports to be added at the top of the generated typescript defintions file
-      // Set to the empty list [] if no imports should be added.
       imports = ["import { Moment } from 'moment';",
                  "import BigNumber from 'bignumber.js';"] // optional, the default is []
     
