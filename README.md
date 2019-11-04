@@ -12,6 +12,8 @@ Add the following to your *build.gradle* plugin configuration block:
     
 ## Configuration
 
+Add the following to your build.gradle file:
+
     typescriptGenerator {
     
       // The path to the resulting generated type defintions file
