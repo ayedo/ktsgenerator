@@ -12,6 +12,8 @@ Add the following to your *build.gradle* plugin configuration block:
     
 ## Configuration
 
+Add the following to your *build.gradle* file:
+
     typescriptGenerator {
     
       // The path to the resulting generated type defintions file
@@ -24,7 +26,7 @@ Add the following to your *build.gradle* plugin configuration block:
       // Only Kotlin classes from this package will be considered for generation
       packageName = "com.example.backend" // required, this is an example
 
-      // Only classes which have the follwing postfixes will be generated
+      // Only classes which have the following postfixes will be generated
       postfixFilters = ["OP", "IP"] // optional, the default is []
 
       // Which type to use for int
@@ -39,7 +41,7 @@ Add the following to your *build.gradle* plugin configuration block:
         "java.net.URL"           : 'string',
         "java.math.BigDecimal"   : 'BigNumber'] // optional, the default is []
       
-      // Imports to be added at the top of the generated typescript defintions file
+      // Imports to be added at the top of the generated typescript definitions file
       imports = ["import { Moment } from 'moment';",
                  "import BigNumber from 'bignumber.js';"] // optional, the default is []
     
