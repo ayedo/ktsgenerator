@@ -7,7 +7,7 @@ This gradle plugin generates Typescript definitions from Kotlin classes.
 Add the following to your *build.gradle* plugin configuration block:
 
     plugins {
-          id 'ch.ayedo.ktsgenerator' version '2.0.0'
+          id 'ch.ayedo.ktsgenerator' version '2.1.0'
     }
     
 ## Configuration
