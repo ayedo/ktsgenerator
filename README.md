@@ -12,7 +12,7 @@ Add the following to your *build.gradle* plugin configuration block:
     
 ## Configuration
 
-Add the following to your build.gradle file:
+Add the following to your *build.gradle* file:
 
     typescriptGenerator {
     
