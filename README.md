@@ -4,7 +4,18 @@ This gradle plugin generates Typescript definitions from Kotlin classes.
 
 ## Installation
 
-Add the following to your *build.gradle* plugin configuration block:
+Add the following to your *build.gradle*:
+
+    buildscript {
+
+        repositories {
+            maven { url 'https://jitpack.io' }
+        }
+
+        dependencies {
+            classpath "com.github.ntrrgc:ts-generator:1.1.1"
+        }
+    }
 
     plugins {
           id 'ch.ayedo.ktsgenerator' version '2.1.0'
