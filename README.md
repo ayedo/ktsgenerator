@@ -26,7 +26,7 @@ Add the following to your *build.gradle* file:
       // Only Kotlin classes from this package will be considered for generation
       packageName = "com.example.backend" // required, this is an example
 
-      // Only classes which have the follwing postfixes will be generated
+      // Only classes which have the following postfixes will be generated
       postfixFilters = ["OP", "IP"] // optional, the default is []
 
       // Which type to use for int
