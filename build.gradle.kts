@@ -24,6 +24,8 @@ tasks.test {
 }
 
 dependencies {
+    compile(gradleApi())
+
     compile(kotlin("stdlib-jdk8"))
     compile("com.github.ntrrgc", "ts-generator", "1.1.1")
     compile("com.google.guava", "guava", "27.0.1-jre")
