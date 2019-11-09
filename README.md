@@ -20,8 +20,7 @@ Add the following to your *build.gradle* file:
       outputPath = project.projectDir.toPath().resolve("src/typings/typings.d.ts") // required, this is an example
     
       // The classpath to scan for classes to convert to typescript defintions
-      classPath = layout.files(
-        project(":project-name").sourceSets.main.runtimeClasspath) // required, this is an example
+      classPath = layout.files(getProject().sourceSets.main.runtimeClasspath) // required, this is an example
         
       // Only Kotlin classes from this package will be considered for generation
       packageName = "com.example.backend" // required, this is an example
